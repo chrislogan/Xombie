@@ -11,7 +11,6 @@ if (isset($_GET["file"]) && is_file($baseDir . $_GET["file"])) {
 }
 
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
@@ -34,7 +33,7 @@ if (isset($_GET["file"]) && is_file($baseDir . $_GET["file"])) {
         right: 0;
     }
   </style>
-<script src="http://code.jquery.com/jquery-1.5.1.min.js"></script>
+<script src="jquery-1.5.1.min.js"></script>
 <script src="src/ace.js" type="text/javascript" charset="utf-8"></script>
 <script src="src/theme-textmate.js" type="text/javascript" charset="utf-8"></script>
 <script src="src/mode-php.js" type="text/javascript" charset="utf-8"></script>
@@ -56,7 +55,7 @@ if (isset($_GET["file"]) && is_file($baseDir . $_GET["file"])) {
 
         $.ajax({
             type: 'POST',
-            url: "/ace/save_file.php",
+            url: "save_file.php",
             data: {file: file, data: data},
             success: function (rdata) {
                 alert(rdata);

@@ -1,6 +1,6 @@
 <?php
 
-$baseDir = "/www/developers/clogan/";
+require "config.php";
 
 $result = false;
 
